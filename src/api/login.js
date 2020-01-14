@@ -21,7 +21,7 @@ class Login extends React.Component {
       });
     }
     const q = {nis:this.nis.value, password:this.password.value};
-    axios.post(con.api + '/siswa/login',q)
+    axios.post(con.api + '/login',q)
     .then(res => {
       if (res.data) {
         localStorage.setItem('auth', true);
@@ -60,11 +60,11 @@ class Login extends React.Component {
           <div>
             <div className="text-center">
               <img src={con.img+'/logo.png'} className="hpx-100 radius-50 border border-2 border-primary border-dash p-2" alt="img" />
-              <div className="my-1 d-flex align-items-center justify-content-center">
-                <span className="f-16 text-primary mr-1">SISKA</span>
-                <span className="f-10"> | Login Siswa</span>
+              <div className="mt-1 d-flex align-items-center justify-content-center">
+                <span className="f-14 bolder text-primary mr-1">SISKA</span>
+                <span className="f-10 bold"> | Login Siswa</span>
               </div>
-              <p className="mt-0 lh-1"> Sistem Informasi Sekolah </p>
+              <p className="mt-0 lh-1 f-9 bolder"> Sistem Informasi Sekolah </p>
             </div>
             <form>
               <Loading />

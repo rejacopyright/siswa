@@ -12,6 +12,7 @@ import Header from './menu/header';
 import Page404 from './menu/404';
 // PROFILE
 import Profile from './profile/profile';
+import Materi from './materi/materi';
 
 const Home = () => (<span>Ww</span>);
 
@@ -31,7 +32,8 @@ class App extends React.Component {
           <div className="container-fluid my-3">
             <Switch>
               <Route exact path="/"> <Home /> </Route>
-              <Route exact path="/profile" component={Profile} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/materi" component={Materi} />
               <Route exact path="*" component={Page404} />
             </Switch>
           </div>

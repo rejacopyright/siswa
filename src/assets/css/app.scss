@@ -2,18 +2,27 @@
 @import url("../fonts/montserrat/Montserrat.css");
 $success : #58d6ad;
 $success-light : #f2fffb;
+$success-g : linear-gradient(to top, $success, #3b9278);
 $info : #3b95ff;
 $info-light : #f2f8ff;
+$info-g : linear-gradient(to top, $info, #4384d2);
 $warning : #ff7600;
 $warning-light : #feffde;
+$warning-g : linear-gradient(to top, $warning, #bb5905);
 $danger : #f14c4c;
 $danger-light : #fff5f5;
+$danger-g : linear-gradient(to top, $danger, #b33838);
 $light : #f9f9f9;
+$light-g : linear-gradient(to top, $light, #eeeeee);
 $gray : #ccc;
+$gray-g : linear-gradient(to top, $gray, #999999);
 $secondary : #555;
+$secondary-g : linear-gradient(to top, $secondary, #333333);
 $dark : #000;
+$dark-g : linear-gradient(to top, $dark, $secondary);
 $primary : #507cbe;
 $primary-light : #f1f6ff;
+$primary-g : linear-gradient(to top, $primary, #2b4873);
 // SIDEBAR
 $sidebar-width : 200px;
 *,
@@ -188,7 +197,13 @@ textarea {
 }
 button,
 input {
+  font-family: inherit;
+  font-weight: inherit !important;
   overflow: visible
+}
+textarea {
+  font-family: inherit;
+  font-weight: inherit !important;
 }
 button,
 select {
@@ -9837,152 +9852,130 @@ ul li i.la {
 .fixed {
   position: fixed!important
 }
-.bg-primary-light,
-.toast-primary-light {
+.bg-primary-g, .toast-primary-g {
+  background-image: $primary-g !important
+}
+.bg-danger-g, .toast-danger-g {
+  background-image: $danger-g !important
+}
+.bg-warning-g, .toast-warning-g {
+  background-image: $warning-g !important
+}
+.bg-success-g, .toast-success-g {
+  background-image: $success-g !important
+}
+.bg-info-g, .toast-info-g {
+  background-image: $info-g !important
+}
+.bg-primary-light, .toast-primary-light {
   background-color: $primary-light !important
 }
-.bg-danger-light,
-.toast-danger-light {
+.bg-danger-light, .toast-danger-light {
   background-color: $danger-light !important
 }
-.bg-warning-light,
-.toast-warning-light {
+.bg-warning-light, .toast-warning-light {
   background-color: $warning-light !important
 }
-.bg-success-light,
-.toast-success-light {
+.bg-success-light, .toast-success-light {
   background-color: $success-light !important
 }
-.bg-info-light,
-.toast-info-light {
+.bg-info-light, .toast-info-light {
   background-color: $info-light !important
 }
-.bg-primary,
-.toast-primary {
+.bg-primary, .toast-primary {
   background-color: $primary !important
 }
-.bg-danger,
-.toast-danger {
+.bg-danger, .toast-danger {
   background-color: $danger !important
 }
-.bg-warning,
-.toast-warning {
+.bg-warning, .toast-warning {
   background-color: $warning !important
 }
-.bg-success,
-.toast-success {
+.bg-success, .toast-success {
   background-color: $success !important
 }
-.bg-info,
-.toast-info {
+.bg-info, .toast-info {
   background-color: $info !important
 }
-.bg-default,
-.toast-default {
+.bg-default, .toast-default {
   background-color: #2bbbad !important
 }
-.bg-secondary,
-.toast-secondary {
+.bg-secondary, .toast-secondary {
   background-color: #a6c !important
 }
-.bg-elegant,
-.toast-elegant {
+.bg-elegant, .toast-elegant {
   background-color: #2e2e2e !important
 }
-.bg-unique,
-.toast-unique {
+.bg-unique, .toast-unique {
   background-color: #880e4f !important
 }
-.bg-dark-green,
-.toast-dark-green {
+.bg-dark-green, .toast-dark-green {
   background-color: #388e3c !important
 }
-.bg-mdb-color,
-.toast-mdb-color {
+.bg-mdb-color, .toast-mdb-color {
   background-color: #59698d !important
 }
-.bg-red,
-.toast-red {
+.bg-red, .toast-red {
   background-color: #d32f2f !important
 }
-.bg-pink,
-.toast-pink {
+.bg-pink, .toast-pink {
   background-color: $primary !important
 }
-.bg-purple,
-.toast-purple {
+.bg-purple, .toast-purple {
   background-color: #8e24aa !important
 }
-.bg-deep-purple,
-.toast-deep-purple {
+.bg-deep-purple, .toast-deep-purple {
   background-color: #512da8 !important
 }
-.bg-indigo,
-.toast-indigo {
+.bg-indigo, .toast-indigo {
   background-color: #3f51b5 !important
 }
-.bg-blue,
-.toast-blue {
+.bg-blue, .toast-blue {
   background-color: #1976d2 !important
 }
-.bg-light-blue,
-.toast-light-blue {
+.bg-light-blue, .toast-light-blue {
   background-color: #82b1ff !important
 }
-.bg-cyan,
-.toast-cyan {
+.bg-cyan, .toast-cyan {
   background-color: #00bcd4 !important
 }
-.bg-teal,
-.toast-teal {
+.bg-teal, .toast-teal {
   background-color: #00796b !important
 }
-.bg-green,
-.toast-green {
+.bg-green, .toast-green {
   background-color: #388e3c !important
 }
-.bg-light-green,
-.toast-light-green {
+.bg-light-green, .toast-light-green {
   background-color: #8bc34a !important
 }
-.bg-lime,
-.toast-lime {
+.bg-lime, .toast-lime {
   background-color: #afb42b !important
 }
-.bg-yellow,
-.toast-yellow {
+.bg-yellow, .toast-yellow {
   background-color: #fbc02d !important
 }
-.bg-amber,
-.toast-amber {
+.bg-amber, .toast-amber {
   background-color: #ffa000 !important
 }
-.bg-orange,
-.toast-orange {
+.bg-orange, .toast-orange {
   background-color: #f57c00 !important
 }
-.bg-deep-orange,
-.toast-deep-orange {
+.bg-deep-orange, .toast-deep-orange {
   background-color: #ff7043 !important
 }
-.bg-brown,
-.toast-brown {
+.bg-brown, .toast-brown {
   background-color: #795548 !important
 }
-.bg-grey,
-.toast-grey {
+.bg-grey, .toast-grey {
   background-color: #616161 !important
 }
-.bg-blue-grey,
-.toast-blue-grey {
+.bg-blue-grey, .toast-blue-grey {
   background-color: #78909c !important
 }
-.bg-white,
-.toast-white {
+.bg-white, .toast-white {
   background-color: #fff !important
 }
-.bg-black,
-.toast-black {
+.bg-black, .toast-black {
   background-color: #000 !important
 }
 .avatar,
@@ -10550,7 +10543,7 @@ a.btn-fab {
   border-radius: 50%
 }
 .user-panel {
-  padding: 40px 20px
+  background: rgba(255,255,255,0.1);
 }
 .user-panel .user_avatar {
   margin-right: 10px
@@ -10574,6 +10567,8 @@ a.btn-fab {
   padding-right: .25rem;
 }
 .offcanvas .sidebar-menu li a {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   padding-top: .35rem;
   padding-bottom: .35rem;
   margin-bottom: 3px;
@@ -10582,7 +10577,7 @@ a.btn-fab {
 .offcanvas .sidebar-menu li a:hover {
   // border-top-right-radius: 50px;
   // border-bottom-right-radius: 50px;
-  background-color: #638dcc
+  background: rgba(255,255,255,.1);
 }
 .offcanvas .sidebar-menu li i {
   padding-left: .25rem;
@@ -10626,7 +10621,8 @@ a.btn-fab {
 .sidebar-menu {
   list-style: outside none none;
   margin: 0;
-  padding: 0;
+  padding-left: .5rem;
+  // padding: 0;
   overflow: hidden;
   white-space: nowrap
 }
@@ -10640,7 +10636,7 @@ a.btn-fab {
   padding: 10px 5px 10px 15px;
   color: #fff;
   font-size: 8pt;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: .5px
 }
 .sidebar-menu>li .label {
@@ -10697,8 +10693,10 @@ a.btn-fab {
 .sidebar-menu .treeview-menu>li>a {
   display: block;
   font-size: 8pt;
-  font-weight: 600;
+  font-weight: 500;
   padding: 5px 5px 5px 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   // margin-right: 10px;
   color: #fff
 }
@@ -10844,7 +10842,7 @@ a.btn-fab {
   position: absolute;
   width: $sidebar-width;
   z-index: 1000;
-  background: $primary;
+  background: $primary-g;
   -webkit-transition: -webkit-transform .3s ease-in-out, width .3s ease-in-out;
   -moz-transition: -moz-transform .3s ease-in-out, width .3s ease-in-out;
   -o-transition: -o-transform .3s ease-in-out, width .3s ease-in-out;
