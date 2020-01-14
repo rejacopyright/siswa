@@ -1,4 +1,4 @@
-const user = JSON.parse(localStorage.admin || '{}');
+const user = JSON.parse(localStorage.user || '{}');
 // api: 'https://api.siska.rejajamil.com/api',
 // img: 'https://api.siska.rejajamil.com/public/img',
 export default {

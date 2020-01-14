@@ -10,8 +10,10 @@ import './assets/css/custom.scss';
 import Sidebar from './menu/side';
 import Header from './menu/header';
 import Page404 from './menu/404';
+// PROFILE
+import Profile from './profile/profile';
 
-const Home = () => (<h1>Home</h1>);
+const Home = () => (<span>Ww</span>);
 
 class App extends React.Component {
   constructor(props){
@@ -22,7 +24,19 @@ class App extends React.Component {
   }
   render() {
     return (
-      <h1>OKE</h1>
+      <Router>
+        <Sidebar onLogout={() => this.props.onLogout()} />
+        <div className="page has-sidebar-left vh-100">
+          <Header onLogout={() => this.props.onLogout()} />
+          <div className="container-fluid my-3">
+            <Switch>
+              <Route exact path="/"> <Home /> </Route>
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="*" component={Page404} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
     );
   }
 }

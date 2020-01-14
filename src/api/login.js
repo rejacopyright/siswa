@@ -13,25 +13,25 @@ class Login extends React.Component {
     document.title = 'Login';
   }
   Login = () => {
-    if (this.username.value) {
+    if (this.nis.value) {
       this.setState({ loading:true });
     }else {
       this.setState({
-        message:'*Mohon isi username dan password'
+        message:'*Mohon isi nis dan password'
       });
     }
-    const q = {username:this.username.value, password:this.password.value};
-    axios.post(con.api + '/admin/login',q)
+    const q = {nis:this.nis.value, password:this.password.value};
+    axios.post(con.api + '/siswa/login',q)
     .then(res => {
       if (res.data) {
         localStorage.setItem('auth', true);
-        localStorage.setItem('admin', JSON.stringify(res.data));
+        localStorage.setItem('user', JSON.stringify(res.data));
         this.props.onLogin({ auth: localStorage.getItem('auth') });
-      }else if (this.username.value) {
+      }else if (this.nis.value) {
         this.setState({
           loading:false,
           error:true,
-          message:'*Username atau Password salah'
+          message:'*NIS atau Password salah'
         });
       }
     });
@@ -62,7 +62,7 @@ class Login extends React.Component {
               <img src={con.img+'/logo.png'} className="hpx-100 radius-50 border border-2 border-primary border-dash p-2" alt="img" />
               <div className="my-1 d-flex align-items-center justify-content-center">
                 <span className="f-16 text-primary mr-1">SISKA</span>
-                <span className="f-10"> | Login</span>
+                <span className="f-10"> | Login Siswa</span>
               </div>
               <p className="mt-0 lh-1"> Sistem Informasi Sekolah </p>
             </div>
@@ -70,11 +70,11 @@ class Login extends React.Component {
               <Loading />
               <div className="form-group reja-input-icon mb-2">
                 <i className="la la-user la-lg" />
-                <input type="text" ref={(i) => this.username = i} name="username" className="form-control form-control-sm bg-white radius-5" placeholder="Username" required autoFocus autoComplete="off" />
+                <input type="text" ref={(i) => this.nis = i} onChange={() => this.nis.value = this.nis.value.toUpperCase()} name="nis" className="form-control form-control-sm bg-white radius-5" placeholder="NIS" required autoFocus autoComplete="off" />
               </div>
               <div className="form-group reja-input-icon mb-0">
                 <i className="la la-lock la-lg" />
-                <input type="password" ref={(i) => this.password = i} name="password" className="form-control form-control-sm bg-white radius-5" placeholder="Password" required autoComplete="off" />
+                <input type="password" ref={(i) => this.password = i} name="password" className="form-control form-control-sm bg-white radius-5" placeholder="Kata Sandi" required autoComplete="off" />
               </div>
               <p className="text-danger f-9 bold text-center my-2">{this.state.message}</p>
               <button type="button" className="btn btn-block btn-sm btn-primary shadow-none radius-5" onClick={this.Login}>Login</button>
@@ -84,13 +84,6 @@ class Login extends React.Component {
               </p>
               <p className="text-center">atau</p>
             </form>
-            <div className="row">
-              <div className="col-12 mx-auto text-center">
-                <a href={con.api + "/login/google"} className="btn radius-30 btn-sm btn-social mr-2 gplus"> <i className="lab la-google" /> Google </a>
-                <a href={con.api + "/login/facebook"} className="btn radius-30 btn-sm btn-social mr-2 facebook"> <i className="lab la-facebook-f" /> Facebook </a>
-                <a href={con.api + "/instagram"} className="btn radius-30 btn-sm btn-social instagram"> <i className="lab la-instagram" /> Instagram </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
