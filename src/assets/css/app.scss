@@ -11104,3 +11104,90 @@ sticky:before {
     background: #fff;
     left: 12px
 }
+// MATERIAL DATE PICKER
+.MuiInputBase-input{
+  background: $light !important;
+  border-radius: 5px !important;
+  padding: .5rem !important;
+  cursor: pointer !important;
+  font-size: 11pt !important;
+}
+.MuiPopover-paper{
+  transform: scale(.8) !important;
+}
+.MuiInputBase-root, .MuiTypography-body1{
+  font: inherit !important;
+  font-weight: 500 !important;
+}
+.MuiPickersClockPointer-pointer, .MuiPickersClock-pin, .MuiPickersClockPointer-noPoint {
+  background: $primary !important;
+}
+.MuiPickersClockPointer-thumb{
+  border-color: $primary !important;
+}
+.MuiPickersClock-clock{
+  background: $light !important;
+}
+.MuiInput-underline:before, .MuiInput-underline:after{
+  content: unset !important
+}
+.MuiPaper-elevation8{
+  @extend .shadow-md;
+}
+// TIMELINE
+.activity-item {
+    border-left: 2px solid $gray;
+    padding-bottom: 1px;
+    padding-left: 24px;
+    position: relative
+}
+.activity-item::before {
+    border: 2px solid;
+    outline: 5px solid white;
+    border-radius: 100%;
+    background: #fff;
+    left: -8px;
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 15px;
+    height: 15px;
+}
+.activity-item:last-child::after {
+    border-radius: 100%;
+    bottom: 0;
+    content: "";
+    left: -5px;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: $info;
+}
+.activity-item .activity-content i {
+    font-size: 12pt;
+    position: relative;
+    top: 2px;
+}
+.activity-item .activity-content small {
+    position: relative;
+    top: -5px;
+}
+.activity-item .activity-content p {
+    padding-bottom: 4px;
+    position: relative
+}
+.activity-primary::before {
+    border-color: $primary
+}
+.activity-info::before {
+    border-color: $info
+}
+.activity-success::before {
+    border-color: $success
+}
+.activity-warning::before {
+    border-color: $warning
+}
+.activity-danger::before {
+    border-color: $danger
+}
